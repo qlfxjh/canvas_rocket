@@ -146,10 +146,7 @@ var canvasApp = (function(){
         $(document.body).bind('keydown', eventKeyDown)
             .bind('keyup',eventKeyUp);
         loadImgs();
-        frameRateCounter = new FrameRateCounter(FRAME_RATE);
         
-        var intervalTime = 1000/FRAME_RATE;
-        gameLoopHandle = setInterval(runGame,intervalTime);
     }
     function eventKeyDown(e){
         e = window.event?window.event:e;
@@ -227,7 +224,10 @@ var canvasApp = (function(){
     }
     function gameReady(){
         //资源加载完成
-        
+        $(".tip").hide();
+        frameRateCounter = new FrameRateCounter(FRAME_RATE);
+        var intervalTime = 1000/FRAME_RATE;
+        gameLoopHandle = setInterval(runGame,intervalTime);
     }
 
     function gameStateLoading(){
