@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>canvas 卫星发射</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+
+<style>
+    
+    body{
+        margin: 0;
+        padding: 0;
+    }
+
+    .form{
+        float:left;
+        width:400px;
+    }
+    .form p{
+        clear:both;
+        min-height: 30px;
+        line-height: 30px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    .form p .label{
+        display: inline-block;
+        width:130px;
+        text-align: right;
+        padding-right: 5px;
+    }
+    .form input{
+        font-size: 14px;
+    }
+    .form input[type=text]{
+        padding:3px;
+        border:1px solid #ccc;
+        height:18px;
+        line-height: 18px;
+    }
+    .form select{
+        padding:3px;
+        border:1px solid #ccc;
+        height:22px;
+        line-height: 18px;
+        font-size: 14px;
+    }
+    .canvas_wrap{
+        
+    }
+    .main_canvas{
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    
+</style>
+</head>
+ 
+<body>
+<canvas id="main_canvas" width="1200" height="700" class="main_canvas">Your Browser not support HTML5 Canvas.</canvas>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/canvas_rocket.js"></script>
+
+</body>
+</html>
