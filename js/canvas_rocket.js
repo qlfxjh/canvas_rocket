@@ -400,7 +400,7 @@ var canvasApp = (function(){
                     currentObject = rocket;
                     currentObjectNo = 0;
                 }
-                sendMessage('system: you lost 1 satellites.','warning');
+                sendMessage('system: you lost 1 satellite.','warning');
                 break;
             }
 
