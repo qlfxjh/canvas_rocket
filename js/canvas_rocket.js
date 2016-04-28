@@ -185,7 +185,9 @@ var canvasApp = (function(){
                 var tar = window.event?window.event.srcElement:e.target;
                 console.log(tar.imgName);
                 imgs[tar.imgName] = tar;
+                updateProgress(imgIndi);
                 imgIndi++;
+                
                 if(imgIndi==sourceImgs.length){
                     loadSounds();
                 }
@@ -208,12 +210,18 @@ var canvasApp = (function(){
                 var tar = window.event?window.event.srcElement:e.target;
                 console.log(tar.soundName);
                 sounds[tar.soundName] = tar;
+                updateProgress(soundIndi+imgs.length);
                 soundIndi++;
                 if(soundIndi==sourceSounds.length){
                     gameReady();
                 }
             }, false);
         }
+    }
+    function updateProgress(num){
+        var ammount = sourceImgs.length + sourceSounds.length;
+        var precent = Math.round(num/ammount * 100);
+        $("#progress_num").html(precent+"%");
     }
     function runGame(){
         checkKeys();
