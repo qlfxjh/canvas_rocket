@@ -210,7 +210,7 @@ var canvasApp = (function(){
                 var tar = window.event?window.event.srcElement:e.target;
                 console.log(tar.soundName);
                 sounds[tar.soundName] = tar;
-                updateProgress(soundIndi+imgs.length);
+                updateProgress(soundIndi+ sourceImgs.length);
                 soundIndi++;
                 if(soundIndi==sourceSounds.length){
                     gameReady();
